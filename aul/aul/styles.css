@@ -1,0 +1,731 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.search-container {
+    margin-left: auto;
+}
+
+.search-container input[type="search"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .search-container input[type="search"] {
+        width: 80%;
+    }
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px; /* Tinggi hero section sesuai tinggi layar */
+    background: url('g1.jpg') no-repeat center center/cover; /* Latar belakang gambar utama */
+    position: relative;
+    overflow: hidden; /* Memastikan konten tidak keluar dari batas */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px; /* Membuat tepi kotak teks melengkung */
+    max-width: 80%; /* Maksimal lebar konten */
+    z-index: 2; /* Menempatkan konten di atas gambar latar belakang */
+}
+
+.hero-text {
+    color: #000000;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.hero-text h2 {
+    margin: 0 0 10px;
+}
+
+.hero-text p {
+    margin: 0 0 20px;
+}
+
+.hero-text button {
+    background-color: #CB4B51;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.hero-text button:hover {
+    background-color: #CB4B51;
+}
+
+.additional-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px; /* Membuat tepi gambar melengkung */
+}
+
+
+.company-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.company-description img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.text-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .company-description {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .company-description img {
+        width: 40%; /* Adjust the width as necessary */
+        max-width: 300px; /* Ensure it doesn't get too large */
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .text-content {
+        max-width: 55%; /* Adjust the width as necessary */
+        margin: 0;
+    }
+}
+
+
+.product-examples {
+   padding-top: 100px;
+    text-align: center;
+}
+
+.product-examples h2 {
+    margin-bottom: 20px;
+    color: #CB4B51;
+}
+
+.product-examples ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust as needed for your design */
+}
+
+.product-examples li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-examples img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.product-examples p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.reasons-to-choose-us {
+    text-align: center;
+    padding: 100px;
+}
+
+.reasons-to-choose-us > img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.reasons-to-choose-us h2 {
+    margin-bottom: 20px;
+}
+
+.reasons-to-choose-us p {
+    margin-bottom: 30px;
+}
+
+.reasons-to-choose-us ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust as necessary */
+}
+
+.reasons-to-choose-us li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reasons-to-choose-us li img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.reasons-to-choose-us li h3 {
+    margin-bottom: 10px;
+}
+
+.reasons-to-choose-us li p {
+    margin: 0;
+}
+
+
+.offers {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px
+   
+}
+
+.offers h2 {
+    margin-bottom: 10px;
+    color: #CB4B51;
+}
+
+.offers p {
+    margin-bottom: 20px;
+   
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the start */
+    flex-wrap: wrap;
+}
+
+.offer-details {
+    max-width: 400px; /* Adjust as needed */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.offer-details img {
+    max-width: 100%;
+    height: auto;
+    padding: 100px;
+    margin-bottom: 20px;
+  
+}
+
+.offer-details h2 {
+    margin-bottom: 10px;
+    color: #CB4B51; /* Adjust text color */
+}
+
+.offer-details p {
+    margin-bottom: 20px;
+    color: #CB4B51; /* Adjust text color */
+}
+
+.offer-details button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #CB4B51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.offer-details button:hover {
+    background-color: #fdfbfc;
+}
+
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+    max-width: 1800px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.contact img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    margin: 20px 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact button:hover {
+    background-color: #e04d50;
+}
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: #CB4B51;
+    color: #fff;
+    padding: 20px;
+    flex-wrap: wrap; /* Untuk memastikan responsivitas pada layar kecil */
+}
+
+.footer-segment {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 100px; /* Pastikan setiap segmen memiliki lebar minimum */
+    text-align: center; /* Menyelaraskan konten di tengah */
+}
+
+.footer-segment h3 {
+    margin-top: 0;
+}
+
+.footer-segment p {
+    margin: 5px 0;
+}
+
+.contact-info {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.contact-info li {
+    margin: 5px 0; /* Memberikan jarak antar item */
+}
+
+.social-media {
+    list-style: none; /* Menghilangkan bullet points */
+    padding: 0; /* Menghilangkan padding default */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Memberikan jarak antar ikon */
+}
+
+.social-media li {
+    margin: 5px 0; /* Memberikan jarak antar item */
+}
+
+.social-media a {
+    color: #fff; /* Mengatur warna ikon */
+    font-size: 24px; /* Ukuran ikon */
+    text-decoration: none; /* Menghilangkan underline */
+}
+
+.social-media a:hover {
+    color: #ddd; /* Warna ikon saat hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-segment {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+
+
+
+.profile-picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.search-item input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.theme-selection h1 {
+    text-align: center;
+    color: #d9534f;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-bar input, .search-bar select {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.theme-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.theme-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme-item img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-item p {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #333;
+}
+
+
+
+
+
+.profile-picture {
+    display: flex;
+    align-items: center; /* Memastikan vertikal alignment */
+}
+
+.profile-picture img {
+    width: 50px; /* Sesuaikan ukuran gambar profil */
+    height: 50px;
+    border-radius: 50%; /* Agar gambar profil menjadi lingkaran */
+    margin-right: 10px; /* Atur jarak antara gambar profil dan nama pengguna */
+}
+
+.username {
+    font-weight: bold; /* Atur tebal huruf */
+    color: #333; /* Atur warna teks */
+    font-family: 'Roboto', sans-serif; /* Gunakan font yang diinginkan */
+    align-self: center; /* Memastikan vertikal alignment */
+}
+
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.search-item input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.about-section {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10em;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust to space-between */
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%; /* Ensure the image does not exceed 50% width */
+    margin-right: 20px; /* Add some spacing between image and text */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    text-align: center;
+}
+
+.about-text h1 {
+    color: tomato;
+}
+
+.about-text p {
+    white-space: pre-line;
+    text-align: center;
+}
+
+
+.what-we-do {
+    background-color: #d9534f;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.what-we-do-content {
+    display: flex;
+    align-items: center;
+}
+
+.what-we-do-images {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.what-we-do-images img {
+    width: 100px;
+    margin: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.what-we-do-text {
+    flex: 1;
+    text-align: center;
+}
+
+
+.contact-us {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-us h1 {
+    color: #d9534f;
+    font-size: 2rem;
+}
+
+.contact-us p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form .form-group input,
+form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-color: #ffe5e5;
+}
+
+form .form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c9302c;
+}
+
+
